@@ -1,25 +1,24 @@
 ---
 # yaml-language-server: $schema=https://schema.blue-build.org/recipe-v1.json
 name: ublue-kinoite-custom
-description: kinoite-main + some packages for my convenience
+description: ~kinoite-main~ bazzite + some packages for my convenience
 
-# the base image to build on top of (FROM) and the version tag to use
-base-image: ghcr.io/ublue-os/kinoite-main
+base-image: ghcr.io/ublue-os/bazzite
 image-version: 42 # latest is also supported if you want new updates ASAP
 
-# module configuration, executed in order
-# you can include multiple instances of the same module
 modules:
-  - type: dnf
-    install:
-      packages:
-        - fish
-        - steam
-    repos:
-      files:
-        - https://pkgs.tailscale.com/stable/fedora/tailscale.repo
-        - https://repo.librewolf.net/librewolf.repo
-        - https://github.com/terrapkg/subatomic-repos/raw/main/terra.repo
+	- type: dnf
+		repos:
+			copr:
+				- matinlotfali/KDE-Rounded-Corners
+			files:
+				- https://pkgs.tailscale.com/stable/fedora/tailscale.repo
+				- https://repo.librewolf.net/librewolf.repo
+				- https://github.com/terrapkg/subatomic-repos/raw/main/terra.repo
+		install:
+			packages:
+				- fish
+				-
 
-  - type: signing # this sets up the proper policy & signing files for signed images to work fully
 
+	- type: signing
