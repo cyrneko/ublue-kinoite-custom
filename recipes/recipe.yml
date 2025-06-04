@@ -19,6 +19,10 @@ modules:
       packages:
         - fish
         - kwin-effect-roundcorners
+        - konsole
+    remove:
+      packages:
+        - ptyxis
 
 
   - type: signing
