@@ -18,7 +18,7 @@ modules:
     install:
       packages:
         - fish
-        -
+        - kwin-effect-roundcorners
 
 
   - type: signing
