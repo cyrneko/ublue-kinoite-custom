@@ -7,18 +7,18 @@ base-image: ghcr.io/ublue-os/bazzite
 image-version: 42 # latest is also supported if you want new updates ASAP
 
 modules:
-	- type: dnf
-		repos:
-			copr:
-				- matinlotfali/KDE-Rounded-Corners
-			files:
-				- https://pkgs.tailscale.com/stable/fedora/tailscale.repo
-				- https://repo.librewolf.net/librewolf.repo
-				- https://github.com/terrapkg/subatomic-repos/raw/main/terra.repo
-		install:
-			packages:
-				- fish
-				-
+  - type: dnf
+    repos:
+      copr:
+        - matinlotfali/KDE-Rounded-Corners
+      files:
+        - https://pkgs.tailscale.com/stable/fedora/tailscale.repo
+        - https://repo.librewolf.net/librewolf.repo
+        - https://github.com/terrapkg/subatomic-repos/raw/main/terra.repo
+    install:
+      packages:
+        - fish
+        -
 
 
-	- type: signing
+  - type: signing
