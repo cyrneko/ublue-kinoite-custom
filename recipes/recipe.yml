@@ -4,7 +4,7 @@ name: ublue-kinoite-custom
 description: ~kinoite-main~ bazzite + some packages for my convenience
 
 base-image: ghcr.io/ublue-os/bazzite
-image-version: 42 # latest is also supported if you want new updates ASAP
+image-version: 42-testing # latest is also supported if you want new updates ASAP
 
 modules:
   - type: dnf
