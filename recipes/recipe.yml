@@ -9,8 +9,8 @@ image-version: 42 # latest is also supported if you want new updates ASAP
 modules:
   - type: dnf
     repos:
-      copr:
-        - matinlotfali/KDE-Rounded-Corners
+      # copr:
+      #  - matinlotfali/KDE-Rounded-Corners
       files:
         - https://pkgs.tailscale.com/stable/fedora/tailscale.repo
         - https://repo.librewolf.net/librewolf.repo
@@ -19,12 +19,22 @@ modules:
     install:
       packages:
         - fish
-        - kwin-effect-roundcorners
         - konsole
         - mullvad-vpn
+        - kbct
     remove:
       packages:
         - ptyxis
 
+  - type: files
+    files:
+      - source: system
+        destination: /
+
+  - type: systemd
+    system:
+      enabled:
+        - kbct.service
+        - kbct-restart.service
 
   - type: signing
