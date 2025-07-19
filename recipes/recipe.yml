@@ -21,7 +21,6 @@ modules:
         - fish
         - konsole
         - mullvad-vpn
-        - kbct
     remove:
       packages:
         - ptyxis
