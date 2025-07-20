@@ -25,6 +25,10 @@ modules:
       packages:
         - ptyxis
 
+  - type: script
+    scripts:
+      - mullvadfix.fish
+
   - type: files
     files:
       - source: system
