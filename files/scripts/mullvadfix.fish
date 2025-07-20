@@ -8,7 +8,8 @@ chmod +x /tmp/wcurl
 
 ls -la
 echo "rpm2archive NOW"
-rpm2archive mullvad.rpm && tar xvf mullvad.rpm.tgz
+rpm2archive mullvad.rpm > mullvad.rpm.tgz
+tar xvf mullvad.rpm.tgz
 ls -la
 
 cp -r opt/Mullvad\ VPN/ /opt/
